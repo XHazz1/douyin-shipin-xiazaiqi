@@ -4,10 +4,10 @@
 
 > Douyin Video Downloader —— 抖音免水印视频下载扩展
 
-[![版本](https://img.shields.io/badge/版本-v2.3.2-4FC921)](https://github.com/HaoBaB521/JKP-Video-Downloader/releases)
-[![下载量](https://img.shields.io/github/downloads/HaoBaB521/JKP-Video-Downloader/total?label=下载量)](https://github.com/HaoBaB521/JKP-Video-Downloader/releases)
-[![Star](https://img.shields.io/github/stars/HaoBaB521/JKP-Video-Downloader?label=Star)](https://github.com/HaoBaB521/JKP-Video-Downloader/stargazers)
-[![Fork](https://img.shields.io/github/forks/HaoBaB521/JKP-Video-Downloader?label=Fork)](https://github.com/HaoBaB521/JKP-Video-Downloader/forks)
+[![版本](https://img.shields.io/badge/版本-v2.3.2-4FC921)](https://github.com/XHazz1/douyin-shipin-xiazaiqi/releases)
+[![下载量](https://img.shields.io/github/downloads/XHazz1/douyin-shipin-xiazaiqi/total?label=下载量)](https://github.com/XHazz1/douyin-shipin-xiazaiqi/releases)
+[![Star](https://img.shields.io/github/stars/XHazz1/douyin-shipin-xiazaiqi?label=Star)](https://github.com/XHazz1/douyin-shipin-xiazaiqi/stargazers)
+[![Fork](https://img.shields.io/github/forks/XHazz1/douyin-shipin-xiazaiqi?label=Fork)](https://github.com/XHazz1/douyin-shipin-xiazaiqi/forks)
 
 [![Chrome](https://img.shields.io/badge/Chrome-支持-4FC921?logo=googlechrome&logoColor=white)]()
 [![Edge](https://img.shields.io/badge/Edge-支持-0078D6?logo=microsoftedge&logoColor=white)]()
@@ -24,6 +24,8 @@
 - 年份版：2026.10.23
 
 作者：伐浩（个人制作） https://b23.tv/hD8Kcri
+
+> 上游项目：[HaoBaB521/JKP-Video-Downloader](https://github.com/HaoBaB521/JKP-Video-Downloader)
 
 （所有问题我不承担，也别联系我。扩展一些小毛病问题，可以在 B 站评论一下，但是不一定能回复。）
 
