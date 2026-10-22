@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="dark">
+  <title>JKP · 设置</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <svg class="svg-sprite" aria-hidden="true" focusable="false">
+    <symbol id="logo-douyin" viewBox="0 0 24 24">
+      <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+    </symbol>
+    <symbol id="logo-bilibili" viewBox="0 0 24 24">
+      <path d="M17.813 4.653h.854c1.51.054 2.769.578 3.773 1.574 1.004.995 1.524 2.249 1.56 3.76v7.36c-.036 1.51-.556 2.769-1.56 3.773s-2.262 1.524-3.773 1.56H5.333c-1.51-.036-2.769-.556-3.773-1.56S.036 18.858 0 17.348v-7.36c.036-1.511.556-2.765 1.56-3.76 1.004-.996 2.262-1.52 3.773-1.574h.854l-.427-.853c-.143-.285-.178-.57-.106-.853.071-.284.213-.52.426-.707.249-.249.538-.373.866-.373.328 0 .617.124.867.373l.853.853h1.92l.853-.853c.25-.249.54-.373.867-.373.327 0 .616.124.866.373.214.187.356.427.427.707.071.283.036.57-.107.853l-.426.853zm.107 1.706a2.47 2.47 0 0 0-.32.022c-.142.018-.249.071-.32.16-.071.09-.106.196-.106.32 0 .125.035.232.106.32.071.09.178.143.32.16.107.018.213.018.32 0 .143-.018.249-.071.32-.16.071-.089.107-.196.107-.32 0-.125-.036-.232-.107-.32a.425.425 0 0 0-.32-.16zm-11.84 0a.425.425 0 0 0-.32.022c-.142.018-.249.071-.32.16-.071.09-.106.196-.106.32 0 .125.035.232.106.32.071.09.178.143.32.16.107.018.213.018.32 0 .143-.018.249-.071.32-.16.071-.089.107-.196.107-.32 0-.125-.036-.232-.107-.32a.425.425 0 0 0-.32-.16zM12 8.373c-.536 0-1.049.09-1.546.267-.498.178-.934.427-1.307.746a3.6 3.6 0 0 0-.906 1.12c-.214.427-.32.89-.32 1.387v1.387c0 .32.071.64.213.96.143.32.303.604.48.853.178.25.391.464.64.64.25.178.5.32.747.427.284.106.552.16.8.16.25 0 .519-.054.8-.16.25-.107.498-.25.747-.427.249-.178.462-.391.64-.64.177-.25.337-.534.48-.853.142-.32.213-.64.213-.96v-1.387c0-.498-.106-.96-.32-1.387a3.6 3.6 0 0 0-.906-1.12 3.657 3.657 0 0 0-1.307-.746 4.5 4.5 0 0 0-1.546-.267z"/>
+    </symbol>
+  </svg>
+
+  <div class="app" id="jkp-app">
+    <div class="ambient" aria-hidden="true">
+      <span class="orb orb-a"></span>
+      <span class="orb orb-b"></span>
+      <span class="orb orb-c"></span>
+      <span class="grid"></span>
+    </div>
+
+    <aside class="rail">
+      <div class="brand">
+        <div class="brand-mark">J</div>
+        <div class="brand-text">
+          <strong>JKP</strong>
+          <span>Focused Video Downloader</span>
+        </div>
+      </div>
+
+      <nav class="nav" aria-label="主导航">
+        <button class="nav-item is-active" type="button" data-view="home">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/><path d="M9.5 21v-6h5v6"/></svg>
+          <span>概览</span>
+        </button>
+        <button class="nav-item" type="button" data-view="settings">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h9"/><path d="M17 6h3"/><circle cx="15" cy="6" r="2"/><path d="M4 12h3"/><path d="M11 12h9"/><circle cx="9" cy="12" r="2"/><path d="M4 18h9"/><path d="M17 18h3"/><circle cx="15" cy="18" r="2"/></svg>
+          <span>设置</span>
+        </button>
+        <button class="nav-item" type="button" data-view="help">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.6 9.2a2.5 2.5 0 1 1 3.4 2.3c-.8.35-1.3 1-1.3 1.9v.3"/><path d="M12 17.2h.01"/></svg>
+          <span>帮助</span>
+        </button>
+      </nav>
+
+      <div class="rail-foot">
+        <a class="creator" href="https://www.douyin.com/user/MS4wLjABAAAApL6WdWT0Fi-l8bPuo5UpBDXhzYs0zC9i7V06NypCGmK4ZmO5GAKfSyHo_RYMsOm6?from_tab_name=main" target="_blank" rel="noopener noreferrer">
+          <span class="avatar">伐</span>
+          <span class="creator-meta">
+            <strong>伐浩</strong>
+            <small>D站创作者 · 独立开发</small>
+          </span>
+        </a>
+        <div class="rail-links">
+          <a href="https://space.bilibili.com/493062255" target="_blank" rel="noopener noreferrer">
+            <span class="brand-logo brand-logo--bilibili" aria-hidden="true">
+              <svg><use href="#logo-bilibili"></use></svg>
+            </span>
+            <span>B 站</span>
+          </a>
+          <a href="https://www.douyin.com/user/MS4wLjABAAAApL6WdWT0Fi-l8bPuo5UpBDXhzYs0zC9i7V06NypCGmK4ZmO5GAKfSyHo_RYMsOm6?from_tab_name=main" target="_blank" rel="noopener noreferrer">
+            <span class="brand-logo brand-logo--douyin" aria-hidden="true">
+              <svg class="brand-glitch cyan"><use href="#logo-douyin"></use></svg>
+              <svg class="brand-glitch pink"><use href="#logo-douyin"></use></svg>
+              <svg class="brand-main"><use href="#logo-douyin"></use></svg>
+            </span>
+            <span>抖音</span>
+          </a>
+        </div>
+        <div class="rail-version">
+          <span>JKP · 本地运行</span>
+          <span class="ver" data-version>v2.3.2</span>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div class="crumbs"><span>JKP</span><i>/</i><b id="crumb">概览</b></div>
+        <div class="topbar-right">
+          <label class="search" for="search">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input id="search" type="search" placeholder="搜索设置…" autocomplete="off" spellcheck="false">
+            <kbd>Ctrl K</kbd>
+          </label>
+          <span class="locale-chip" id="locale-chip">简体中文</span>
+          <span class="version-chip" data-version>v2.3.2</span>
+        </div>
+      </header>
+
+      <!-- ===================== 概览 ===================== -->
+      <section class="view is-active" id="view-home">
+        <div class="hero card">
+          <div class="hero-badge"><span class="pulse"></span> v<span data-version-text>2.3.2</span> · 全新设置中心</div>
+          <h1>专注、干净、<em>一键</em>下载抖音视频</h1>
+          <p class="hero-sub">在作者主页、推荐流、点赞收藏、历史记录里，只要视频上出现下载图标，就能直接保存。新版重构了设置界面与下载链路：响应更快、批量更稳、配置更省心。</p>
+          <div class="hero-actions">
+            <button class="btn btn-primary" type="button" data-goto="settings">
+              打开设置
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+            </button>
+            <button class="btn btn-ghost" type="button" data-goto="help">使用帮助</button>
+          </div>
+          <div class="hero-meta">
+            <div class="meta">
+              <span>文件名方案</span>
+              <b id="home-scheme">作者 · 描述 · 分辨率</b>
+            </div>
+            <div class="meta">
+              <span>下载质量</span>
+              <b id="home-quality">最高分辨率</b>
+            </div>
+            <div class="meta">
+              <span>保存目录</span>
+              <b id="home-dir">douyin/</b>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-head">
+          <h2>本次更新</h2>
+          <span>Release Notes</span>
+        </div>
+
+        <div class="timeline">
+          <article class="tl-item card">
+            <span class="tl-dot"></span>
+            <div class="tl-head">
+              <b>v2.3.2</b>
+              <time>2026.10.22</time>
+              <span class="tag tag-hot">当前版本</span>
+            </div>
+            <ul class="tl-list">
+              <li><b>下载响应更快</b>：解析与下载解耦，最多等待 1.5 秒即可开始下载，不再被长时间解析卡住。</li>
+              <li><b>批量文件名修复</b>：按下载链接匹配文件名，多个视频同时下载也不会串名、丢名。</li>
+              <li><b>设置升级兼容</b>：旧版本配置自动补齐新增项，不再出现开关不生效的问题。</li>
+              <li><b>性能优化</b>：移除被 CSS 隐藏的网格按钮注入与空转定时器，页面更轻。</li>
+              <li><b>安全加固</b>：页面解析请求增加抖音域名白名单，避免被当作任意请求代理。</li>
+              <li><b>全新 UI</b>：设置页重构为独立轻量界面，移除 1MB 级 UI 框架依赖，打开更快。</li>
+            </ul>
+          </article>
+
+          <article class="tl-item card tl-muted">
+            <span class="tl-dot"></span>
+            <div class="tl-head">
+              <b>v2.3.1</b>
+              <time>2026.10.19</time>
+            </div>
+            <ul class="tl-list">
+              <li>优化视频解析方式，读取当前视频直链更快。</li>
+              <li>修复偶发卡顿、白屏、点击后长时间无反应的问题。</li>
+              <li>支持「主要生成 / 2号生成」两套文件名逻辑。</li>
+              <li>引入液态玻璃质感与磨砂效果。</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="section-head">
+          <h2>核心能力</h2>
+          <span>Highlights</span>
+        </div>
+
+        <div class="feature-grid">
+          <article class="card feature">
+            <span class="feature-ico blue">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 4.5 13.5H11l-1 8.5 8.5-11.5H12l1-8.5Z"/></svg>
+            </span>
+            <h3>极速解析</h3>
+            <p>页面数据与播放地址并行读取，点击后几乎立即开始下载，减少等待。</p>
+          </article>
+          <article class="card feature">
+            <span class="feature-ico cyan">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M4 19h16"/></svg>
+            </span>
+            <h3>批量稳定</h3>
+            <p>多码流、多文件并发下载时按链接独立命名，文件名更可靠。</p>
+          </article>
+          <article class="card feature">
+            <span class="feature-ico violet">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 4.5 3.4 8.3 8 9 4.6-.7 8-4.5 8-9V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg>
+            </span>
+            <h3>隐私本地</h3>
+            <p>所有设置与解析都在浏览器本地完成，不上传账号、链接或下载记录。</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- ===================== 设置 ===================== -->
+      <section class="view" id="view-settings" hidden>
+        <div class="view-head">
+          <div>
+            <h1>下载设置</h1>
+            <p>DOWNLOAD CENTER · 配置会保存在本地，仅对本扩展生效。</p>
+          </div>
+          <span class="view-badge">Ctrl + S 保存</span>
+        </div>
+
+        <div class="savebar" id="savebar">
+          <div class="save-status">
+            <span class="status-dot" id="status-dot"></span>
+            <span id="save-status">已保存</span>
+          </div>
+          <div class="save-actions">
+            <button class="btn btn-ghost" type="button" id="btn-reset">恢复默认</button>
+            <button class="btn btn-primary" type="button" id="btn-save" data-i18n="options.saveSetting">保存设置</button>
+          </div>
+        </div>
+
+        <div class="settings" id="settings-list">
+          <section class="setting card" id="card-filename" data-search="文件名 作者 描述 标签 分辨率 视频id filename creator description tag resolution vid 顺序">
+            <header class="setting-head">
+              <div>
+                <h2 data-i18n="options.videoFileName">视频文件名</h2>
+                <p data-i18n="options.videoFileNameTooltip">下载的视频文件名将根据下方选择项的属性及顺序生成，以空格分隔。</p>
+              </div>
+              <span class="tag">FILENAME</span>
+            </header>
+
+            <div class="field">
+              <div class="field-label">生成顺序</div>
+              <div class="scheme" id="scheme-list"></div>
+              <div class="scheme-add">
+                <select class="select" id="scheme-add" aria-label="添加文件名属性"></select>
+                <button class="btn btn-soft" type="button" id="scheme-add-btn">添加属性</button>
+              </div>
+              <div class="preview">
+                <span class="preview-label">文件名预览</span>
+                <code id="preview-name">—</code>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="row-text">
+                <b data-i18n="options.videoCreatorWithAt">在视频作者名称前添加 @ 符号</b>
+                <p data-i18n="options.videoCreatorWithAtTooltip">在下载的视频文件名中，是否在作者名称前添加 @ 符号。</p>
+              </div>
+              <label class="switch">
+                <input type="checkbox" id="opt-creator-at">
+                <span class="switch-track"><span class="switch-thumb"></span></span>
+              </label>
+            </div>
+
+            <div class="row">
+              <div class="row-text">
+                <b data-i18n="options.videoDescriptionWithHashtag">视频描述保留话题标签</b>
+                <p data-i18n="options.videoDescriptionWithHashtagTip">在下载的视频文件名中，是否保留视频描述中以 # 开头的话题标签。</p>
+              </div>
+              <label class="switch">
+                <input type="checkbox" id="opt-description-hashtag">
+                <span class="switch-track"><span class="switch-thumb"></span></span>
+              </label>
+            </div>
+          </section>
+
+          <section class="setting card" id="card-quality" data-search="视频质量 分辨率 码率 文件大小 quality resolution bitrate size 画质">
+            <header class="setting-head">
+              <div>
+                <h2 data-i18n="options.videoQuality">视频质量</h2>
+                <p data-i18n="options.videoQualityTip">以何种质量下载视频</p>
+              </div>
+              <span class="tag">QUALITY</span>
+            </header>
+            <div class="choice-group" id="quality-group" role="radiogroup" aria-label="视频质量">
+              <label class="choice">
+                <input type="radio" name="quality" value="HighestResolution">
+                <span class="choice-body">
+                  <b data-i18n="options.videoHighestResolution">最高分辨率</b>
+                  <small>优先选择清晰度最高的码流，适合收藏与二次创作。</small>
+                </span>
+                <span class="choice-check"></span>
+              </label>
+              <label class="choice">
+                <input type="radio" name="quality" value="HighestBitrate">
+                <span class="choice-body">
+                  <b data-i18n="options.videoHighestBitrate">最高码率</b>
+                  <small>优先选择码率最高的码流，画面细节更丰富。</small>
+                </span>
+                <span class="choice-check"></span>
+              </label>
+              <label class="choice">
+                <input type="radio" name="quality" value="LargestFileSize">
+                <span class="choice-body">
+                  <b data-i18n="options.videoLargestFileSize">最大文件大小</b>
+                  <small>优先选择体积最大的文件，通常也是原始画质。</small>
+                </span>
+                <span class="choice-check"></span>
+              </label>
+            </div>
+          </section>
+
+          <section class="setting card" id="card-directory" data-search="下载目录 子目录 文件夹 directory subdirectory folder 路径">
+            <header class="setting-head">
+              <div>
+                <h2 data-i18n="options.downloadSubdirectory">下载子目录</h2>
+                <p data-i18n="options.downloadSubdirectoryTip">文件下载的子目录</p>
+              </div>
+              <span class="tag">FOLDER</span>
+            </header>
+
+            <div class="row">
+              <div class="row-text">
+                <b data-i18n="options.enableSubdirectory">启用子目录</b>
+                <p data-i18n="options.enableSubdirectoryTip">是否将文件下载到子目录。</p>
+              </div>
+              <label class="switch">
+                <input type="checkbox" id="opt-enable-subdir">
+                <span class="switch-track"><span class="switch-thumb"></span></span>
+              </label>
+            </div>
+
+            <div class="field" id="subdir-field">
+              <label class="field-label" for="opt-subdir" data-i18n="options.subdirectoryName">子目录名称</label>
+              <input class="text-input" id="opt-subdir" type="text" maxlength="64" autocomplete="off" spellcheck="false" placeholder="douyin">
+              <p class="hint" id="subdir-hint" data-i18n="options.subdirectoryNameTip">指定子目录名称</p>
+              <div class="preview">
+                <span class="preview-label">保存路径预览</span>
+                <code id="preview-path">—</code>
+              </div>
+            </div>
+          </section>
+
+          <section class="setting card" id="card-tips" data-search="下载提示 解析 开始 完成 通知 snackbar tip notification">
+            <header class="setting-head">
+              <div>
+                <h2 data-i18n="options.downloadTipSetting">下载提示</h2>
+                <p data-i18n="options.downloadTipSettingTip">点击下载按钮时，窗口右上角会出现下载提示。</p>
+              </div>
+              <span class="tag">TOAST</span>
+            </header>
+
+            <div class="row">
+              <div class="row-text">
+                <b data-i18n="options.parseInformation">解析信息</b>
+                <p data-i18n="options.parseInformationTip">在解析信息阶段，扩展将解析下载所需的所有信息。</p>
+              </div>
+              <label class="switch">
+                <input type="checkbox" id="opt-tip-parse">
+                <span class="switch-track"><span class="switch-thumb"></span></span>
+              </label>
+            </div>
+            <div class="row">
+              <div class="row-text">
+                <b data-i18n="options.startDownload">开始下载</b>
+                <p data-i18n="options.startDownloadTip">在开始下载阶段，您可以看到浏览器开始下载文件，并可在下载页面查看进度。</p>
+              </div>
+              <label class="switch">
+                <input type="checkbox" id="opt-tip-start">
+                <span class="switch-track"><span class="switch-thumb"></span></span>
+              </label>
+            </div>
+            <div class="row">
+              <div class="row-text">
+                <b data-i18n="options.completeDownload">下载完成</b>
+                <p data-i18n="options.completeDownloadTip">在下载完成阶段，文件已下载完毕，您可以在资源管理器中查看。</p>
+              </div>
+              <label class="switch">
+                <input type="checkbox" id="opt-tip-complete">
+                <span class="switch-track"><span class="switch-thumb"></span></span>
+              </label>
+            </div>
+          </section>
+
+          <section class="setting card" id="card-logic" data-search="文件名生成逻辑 主要 备用 primary backup 作者 描述">
+            <header class="setting-head">
+              <div>
+                <h2 data-i18n="options.fileNameLogic">文件名生成逻辑</h2>
+                <p data-i18n="options.fileNameLogicTip">选择生成视频文件名所使用的主逻辑或备用逻辑，二者只能启用一个。</p>
+              </div>
+              <span class="tag">LOGIC</span>
+            </header>
+            <div class="choice-group" id="logic-group" role="radiogroup" aria-label="文件名生成逻辑">
+              <label class="choice">
+                <input type="radio" name="logic" value="primary">
+                <span class="choice-body">
+                  <b data-i18n="options.fileNameLogicPrimary">主要生成</b>
+                  <small data-i18n="options.fileNameLogicPrimaryTip">从页面数据读取作者、描述、话题生成文件名，失败时自动回退到页面元素读取。</small>
+                </span>
+                <span class="choice-check"></span>
+              </label>
+              <label class="choice">
+                <input type="radio" name="logic" value="backup">
+                <span class="choice-body">
+                  <b data-i18n="options.fileNameLogicBackup">2号生成</b>
+                  <small data-i18n="options.fileNameLogicBackupTip">通过页面卡片元素精确定位当前视频并读取作者、描述生成文件名，适用于主逻辑无法识别时切换。</small>
+                </span>
+                <span class="choice-check"></span>
+              </label>
+            </div>
+          </section>
+        </div>
+
+        <div class="empty" id="settings-empty" hidden>
+          没有找到匹配的设置项，换个关键词试试。
+        </div>
+      </section>
+
+      <!-- ===================== 帮助 ===================== -->
+      <section class="view" id="view-help" hidden>
+        <div class="view-head">
+          <div>
+            <h1>帮助与反馈</h1>
+            <p>HELP CENTER · 常见问题、使用规则与联系方式。</p>
+          </div>
+          <span class="view-badge">先看这里</span>
+        </div>
+
+        <div class="help-grid">
+          <div class="card faq">
+            <h2>常见问题</h2>
+
+            <details>
+              <summary>为什么页面上没有出现下载按钮？</summary>
+              <p>确认当前页面是抖音网页版（www.douyin.com），并且内容已经加载完成。扩展只会在支持的页面注入按钮；如果刚安装或刚更新，请刷新页面再试。</p>
+            </details>
+
+            <details>
+              <summary>点击下载后很久没有反应？</summary>
+              <p>新版把解析与下载拆开：最多等待 1.5 秒就会用当前播放地址开始下载，详情解析在后台继续。如果仍然无响应，可刷新页面重试，或在设置中切换「文件名生成逻辑」。</p>
+            </details>
+
+            <details>
+              <summary>下载的文件名不对或作者为空？</summary>
+              <p>在设置里调整「视频文件名」的生成顺序，并尝试把「文件名生成逻辑」切换为「2号生成」。该模式会通过页面卡片元素重新定位作者与描述。</p>
+            </details>
+
+            <details>
+              <summary>为什么有的视频没有声音或画质偏低？</summary>
+              <p>抖音部分视频使用分离的音视频流，扩展会优先选择带音轨的完整文件。若遇到异常，可在设置中切换视频质量为「最高码率」或「最大文件大小」后重试。</p>
+            </details>
+
+            <details>
+              <summary>设置保存后没有生效？</summary>
+              <p>设置保存在浏览器本地，刷新抖音页面后生效。若扩展被浏览器更新或重装，本地设置可能被重置，请重新保存一次。</p>
+            </details>
+          </div>
+
+          <aside class="help-side">
+            <div class="card">
+              <h2>使用规则</h2>
+              <ol class="rules">
+                <li>禁止二次修改、反编译后重新打包分发</li>
+                <li>禁止用于商业宣传、带货或推广活动</li>
+                <li>禁止倒卖、售卖、捆绑销售本扩展</li>
+                <li>禁止盗取、窃取他人作品或绕过平台权限</li>
+              </ol>
+            </div>
+
+            <div class="card support">
+              <h2>支持作者</h2>
+              <p class="support-lead">如果这个扩展帮到了你，关注 / 点赞就是最好的支持。</p>
+              <a class="contact" href="https://www.douyin.com/user/MS4wLjABAAAApL6WdWT0Fi-l8bPuo5UpBDXhzYs0zC9i7V06NypCGmK4ZmO5GAKfSyHo_RYMsOm6?from_tab_name=main" target="_blank" rel="noopener noreferrer">
+                <span class="brand-logo brand-logo--douyin" aria-hidden="true">
+                  <svg class="brand-glitch cyan"><use href="#logo-douyin"></use></svg>
+                  <svg class="brand-glitch pink"><use href="#logo-douyin"></use></svg>
+                  <svg class="brand-main"><use href="#logo-douyin"></use></svg>
+                </span>
+                <span class="contact-text"><b>抖音 · 伐浩</b><small>关注 · 点赞 · 收藏</small></span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M9 7h8v8"/></svg>
+              </a>
+              <a class="contact" href="https://space.bilibili.com/493062255" target="_blank" rel="noopener noreferrer">
+                <span class="brand-logo brand-logo--bilibili" aria-hidden="true">
+                  <svg><use href="#logo-bilibili"></use></svg>
+                </span>
+                <span class="contact-text"><b>B 站 · 伐浩</b><small>关注 · 点赞 · 投币</small></span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M9 7h8v8"/></svg>
+              </a>
+              <p class="support-note">你的每一次关注和三连，都是持续更新的动力。</p>
+            </div>
+
+            <div class="card about">
+              <h2>关于</h2>
+              <p>JKP · 专注于视频下载</p>
+              <p class="muted">版本 <span data-version>v2.3.2</span> · 由 伐浩 独立开发维护</p>
+              <p class="muted">仅供个人学习交流使用，请勿用于商业用途。</p>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <div class="toasts" id="toasts" role="status" aria-live="polite"></div>
+  </div>
+
+  <script src="options.js" defer></script>
+</body>
+</html>
